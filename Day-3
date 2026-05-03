@@ -1,6 +1,10 @@
 #records = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
 #print the only second lowest grade in the records names/students  
 
+#- s[0] → pehla element (index 0) → name
+#- s[1] → dusra element (index 1) → score
+
+
 if __name__ == '__main__':
     records = []
     for _ in range(int(input())):
