@@ -1,0 +1,18 @@
+#records = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+#print the only second lowest grade in the records names/students  
+
+if __name__ == '__main__':
+    records = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        records.append([name, score])
+
+scores = [s[1] for s in records]
+uniquescore = sorted(set(scores))
+second_lowest = uniquescore[1]
+
+names = [s[0] for s in records if s[1] == second_lowest ]
+
+for n in sorted(names):
+    print(n)
