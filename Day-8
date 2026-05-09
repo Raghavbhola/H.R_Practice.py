@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    N = []   # start with empty list
+    n = int(input())   # number of commands
+    
+    for _ in range(n):
+        cmd = input().split()
+        if cmd[0] == "insert":
+            N.insert(int(cmd[1]), int(cmd[2]))
+        elif cmd[0] == "append":
+            N.append(int(cmd[1]))
+        elif cmd[0] == "remove":
+            N.remove(int(cmd[1]))
+        elif cmd[0] == "pop":
+            N.pop()
+        elif cmd[0] == "sort":
+            N.sort()
+        elif cmd[0] == "reverse":
+            N.reverse()
+        elif cmd[0] == "print":
+            print(N)
