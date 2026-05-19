@@ -1,0 +1,21 @@
+import string
+
+alnum = string.ascii_letters + string.digits    # a-z + A-Z + 0-9 
+alpha = string.ascii_letters   # a-z + A-Z
+digits = string.digits         # 0-9
+alpha_lower = string.ascii_lowercase  # a-z
+alpha_upper = string.ascii_uppercase  # A-Z
+
+if __name__ == '__main__':
+    s = input()
+
+    # 1. Alphanumeric check
+    print(any(char.isalnum() for char in s))
+    # 2. Alphabet check
+    print(any(char.isalpha() for char in s))
+    # 3. Digit check
+    print(any(char.isdigit() for char in s))
+    # 4. Lowercase check
+    print(any(char.islower() for char in s))
+    # 5. Uppercase check
+    print(any(char.isupper() for char in s))
