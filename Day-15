@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n, m = map(int, input().split())
+
+#Top Half
+for i in range(n//2):
+    print((".|." * (2*i+1)).center(m, "-"))
+#Middle Line
+print("WELCOME".center(m, "-"))
+#Bottom Half
+for i in range(n//2):
+    print((".|." * (2*(n//2 - i) - 1)).center(m, "-"))
+
+
+#Sample Input - 9 27
+#Sample Output :-
+
+------------.|.------------
+---------.|..|..|.---------
+------.|..|..|..|..|.------
+---.|..|..|..|..|..|..|.---
+----------WELCOME----------
+---.|..|..|..|..|..|..|.---
+------.|..|..|..|..|.------
+---------.|..|..|.---------
+------------.|.------------
