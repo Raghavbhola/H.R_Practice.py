@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    c = a+b #addition
+    d = a-b #subtraction
+    e = a*b #multiplication
+    
+print(c)        
+print(d)
+print(e)
