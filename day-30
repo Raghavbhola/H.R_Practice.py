@@ -1,0 +1,34 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    result = s.title()     #title() -- capitalize first chr. of every word/str.
+    
+    words = result.split(" ")
+    fixed = []
+    
+    for w in words:
+        if w and w[0].isdigit() and len(w) > 1:
+            fixed.append(w[0] + w[1].lower() + w[2:])
+        else:
+            fixed.append(w)
+    
+    return " ".join(fixed)
+    
+    
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
