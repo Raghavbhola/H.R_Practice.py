@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from itertools import product  #It is used because there is a built-in shortcut in Python to create a Cartesian product. and there is no need to write nested loop.
+
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+
+for i in product(A, B):
+    print(i, end=" ")
