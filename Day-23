@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+
+n,m = map(int, input().split()) # n is Group A words and m is Group B
+
+A = [input().strip() for _ in range(n)] #Group A
+B = [input().strip() for _ in range(m)] #Group B
+
+
+for b in B:  #every word in Group B
+    indices = [i+1 for i in range(len(A)) if A[i] == b]
+    if indices:
+        print(*indices) #space- separated indices
+    else:
+        print(-1)       
