@@ -11,3 +11,4 @@ for i in range(T):
         print("True")  #it is valid
     except re.error:
         print("False") #it is invalid   
+
