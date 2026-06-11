@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+#-------------=-- Python 2 (HackerRank env.)-------------------------------------------------------
+import re
+
+T = int(raw_input()) #number of test cases
+
+for i in range(T):
+    s = raw_input().strip() #regex input
+    try:
+        re.compile(s)  # try compile regex
+        print("True")  #it is valid
+    except re.error:
+        print("False") #it is invalid   
