@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+S, k = input().split()  # for input string(S) and size(K)
+k = int(k)              # k str --> int
+
+for i in permutations(sorted(S), k): # sorted(S)→ sorting the chr. to lexicographic sorted order 
+    print("".join(i))
+
+# print(S,k)    
