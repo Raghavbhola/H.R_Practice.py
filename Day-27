@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import calendar
+
+m, d, y = map(int, input().split()) #space-separated month,day, year
+day_name = calendar.weekday(y, m, d) #weeday(year,month,day)-- return no. like:-(0-Monday, 1-Tuesday......)
+day_name = calendar.day_name[day_name] #week - name like- Monday...Sunday.
+
+print(day_name.upper())   # capital_letter
