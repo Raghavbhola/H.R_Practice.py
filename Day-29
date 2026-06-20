@@ -4,3 +4,4 @@ N=int(input()); cols=input().split()
 students=[dict(zip(cols,input().split())) for _ in range(N)]
 avg=sum(int(s[c]) for s in students for c in s if c.lower()=="marks")/N
 print(avg)
+
