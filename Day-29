@@ -5,3 +5,15 @@ students=[dict(zip(cols,input().split())) for _ in range(N)]
 avg=sum(int(s[c]) for s in students for c in s if c.lower()=="marks")/N
 print(avg)
 
+#-------------------------------Explaination-------------------------------------
+
+N = int(input())  # total number of students
+cols = input().split()  # column names in any order
+
+# Build a list of dictionaries: each student's data mapped to its column name
+students = [dict(zip(cols, input().split())) for _ in range(N)]
+
+# Calculate average marks (case-insensitive match for "marks")
+avg = sum(int(s[c]) for s in students for c in s if c.lower() == "marks") / N
+print(avg)
+
