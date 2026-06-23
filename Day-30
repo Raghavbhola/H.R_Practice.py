@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input()) #no. of items
+# item_name , net_price = input().split()  #item + price
+# net_price = int(net_price)
+items = []
+
+for i in range(n):
+    item_name, net_price = input().split()  #item + price
+    net_price = int(net_price)
+    items.append((item_name, net_price))
+
+for name,net in items:
+    print(name,net)
