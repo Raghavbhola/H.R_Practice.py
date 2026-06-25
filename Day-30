@@ -6,9 +6,14 @@ n = int(input()) #no. of items
 items = []
 
 for i in range(n):
-    item_name, net_price = input().split()  #item + price
-    net_price = int(net_price)
-    items.append((item_name, net_price))
+    parts = input().split()
+    name = " ".join(parts[:-1])   # join all except last
+    price = (parts[-1])        # last part is price
+    price = int(price)
+    if name in items:
+        items[name] += price
+    else:
+        items[name] = price    
 
-for name,net in items:
+for name,net in items.items():
     print(name,net)
