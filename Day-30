@@ -17,3 +17,26 @@ for i in range(n):
 
 for name,net in items.items():
     print(name,net)
+
+#--------------------------------------------------------------------------------------------------------------
+
+n = int(input())
+
+emp_li = {}
+for i in range(n):
+    st = input().split()
+    
+    name = " ".join(st[:-1])
+    price = int(st[-1])
+    if name in emp_li:
+        emp_li[name] += price
+    else:
+        emp_li[name] = price   
+    
+# emp_set = set(emp_li)
+# print(emp_li)    
+# for i in emp_li():
+#     print()
+    
+for key, value in emp_li.items():
+    print(f"{key}" +" "+ f"{value}")
