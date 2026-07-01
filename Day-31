@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N = int(input()) #total no. of country stamps
+# country_stamp = input().strip()
+stack = []
+unique_stamp = set()  #empty set
+for i in range(N):
+    country_stamp = input().strip()
+    stack.append(country_stamp)  #push into stack
+    
+    unique_stamp.add(country_stamp) #add into set
+    
+    
+print(len(unique_stamp))    # distinct stamps count
