@@ -1,0 +1,15 @@
+n = int(input())  #no. of elements
+s = set(map(int, input().split())) #set
+N = int(input())  # no. of commands
+
+for i in range(N):
+    cmd = input().split()
+    if cmd[0] == 'pop':      #if cmd is pop
+        s.pop()
+    elif cmd[0] == 'remove': #if cmd is remove
+        s.remove(int(cmd[1]))
+    else:
+        cmd[0] == 'discard'  #if cmd is discard
+        s.discard(int(cmd[1]))
+              
+print(sum(s))
